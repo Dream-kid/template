@@ -33,18 +33,22 @@ using namespace std;
 #define all(v) v.begin(),v.end()
 
 #define sii(t) scanf("%d",&t)
-#define sll(t) scanf("%lld",&t)
+#define ssssii(a,b,c,d) scanf("%d%d%d%d",&a,&b,&c,&d)
+#define sssii(a,b,c) scanf("%d%d%d",&a,&b,&c)
+#define ssii(a,b) scanf("%d%d",&a,&b)
 #define sll(t) scanf("%lld",&t)
 #define ssll(a,b) scanf("%lld%lld",&a,&b)
 #define ssd(a,b) scanf("%lf%lf",&a,&b)
 #define sssll(a,b,c) scanf("%lld%lld%lld",&a,&b,&c)
 #define ssslf(a,b,c) scanf("%lf%lf%lf",&a,&b,&c)
 #define ssssll(a,b,c,d) scanf("%lld%lld%lld%lld",&a,&b,&c,&d)
-#define Case(no) printf("Case #%lld:\n",++no)
+#define Case1(no) printf("Case %lld:\n",++no)
+#define Case2(no) printf("Case %d:\n",++no)
 #define nl puts("")
 #define pll(a) printf("%lld\n",a)
-#define P(a) printf("%d ",a)
-#define PLL(a) printf("%lld ",a)
+#define ppll(a,b) printf("%lld %lld\n",a,b)
+#define pii(a) printf("%d\n",a)
+#define ppii(a,b) printf("%d %d\n",a,b)
 
 
 #define ff first
@@ -63,20 +67,21 @@ using namespace std;
 #define output freopen("out.txt","w",stdout)
 #define input freopen("in.txt","r",stdin)
 #define flop(m,n,q)             for(ll i=m;i<=n;i+=q)
+#define optimize ios::sync_with_stdio(0), cin.tie(0)
 ////============ CONSTANT ===============////
 #define mx  (100010)
-#define inf 299999
+#define inf 100010
 #define eps 1e-9
-#define optimize ios::sync_with_stdio(0), cin.tie(0)
-#define mod1 10000010
-//queen moves
-//int fx[]={0,0,1,-1,1,1,-1,-1};
-//int fy[]={1,-1,0,0,1,-1,1,-1};
-
-//knight moves
-//int fx[]={-2,-2,-1,-1,1,1,2,2};
-//int fy[]={-1,1,-2,2,-2,2,-1,1};
-typedef int ll;
+#define mod1  1000000009
+/*----------------------Graph Moves----------------*/
+//const int fx[]={+1,-1,+0,+0};
+//const int fy[]={+0,+0,+1,-1};
+//const int fx[]={+0,+0,+1,-1,-1,+1,-1,+1};   // Kings Move
+//const int fy[]={-1,+1,+0,+0,+1,+1,-1,-1};  // Kings Move
+//const int fx[]={-2, -2, -1, -1,  1,  1,  2,  2};  // Knights Move
+//const int fy[]={-1,  1, -2,  2, -2,  2, -1,  1}; // Knights Move
+/*------------------------------------------------*/
+typedef long long ll;
 //#pragma GCC optimize("O3")
 //#pragma GCC optimize("Ofast,no-stack-protector")
 //#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx")
@@ -86,6 +91,7 @@ typedef int ll;
 
 ////=====================================////
 ///-----SOURAV CHAKRABORTY-----///
+///== KUET CSE 16 ==///
 ////=====================================////
 // for substring search
 /* b[10000];
