@@ -95,45 +95,39 @@ typedef long long ll;
 ////=====================================////
 // for substring search
 /* b[10000];
-void kmpPreprocess(char *substr)
+void kmpPreprocess(string substr)
 {
-    const int m = strlen(substr);
-    int i = 0, j = -1;
-
+    ll m = substr.size();
+    ll i = 0, j = -1;
     b[i] = -1;
     while(i < m)
     {
         while(j >= 0 && substr[i] != substr[j])
             j = b[j];
-
         i++;
         j++;
         b[i] = j;
     }
 }
-
-int kmp(char *str, char *substr)
+ll kmp(string str, string substr)
 {
-    int i=0, j=0, count = 0;
-    const int n = strlen(str);
-    const int m = strlen(substr);
-
+    ll i=0, j=0, count = 0;
+    ll n = str.size();
+    ll m = substr.size();
     kmpPreprocess(substr);
     while (i<n)
     {
         while (j>=0 && str[i]!=substr[j])
             j=b[j];
-
         i++;
         j++;
-
         if (j==m)
         {
             count++;
             j=b[j];
         }
     }
-    return count;
+    return count;//count = how many char are common between two string
 }*/
 /*
 ll visited[inf+10];
@@ -179,21 +173,17 @@ string multiply( string a, int b )
 }
 
 // big mod
-ll big_mod(ll base, ll power, ll mod)
+inline ll big_mod ( ll a, ll p, ll m )
 {
-    if(power==0) return 1;
-
-    else if(power%2==1)
+    ll res = 1 % m, x = a % m;
+    while (p)
     {
-        ll p1 = base % mod;
-        ll p2 = (big_mod(base,power-1,mod))%mod;
-        return (p1*p2)%mod;
+        if (p & 1)
+            res = (res * x) % m;
+        x = (x * x) % m;
+        p >>= 1;
     }
-    else if(power%2==0)
-    {
-        ll p1 = (big_mod(base,power/2,mod))%mod;
-        return (p1*p1)%mod;
-    }
+    return res;
 }
 // extended euclidean algorithm modulo inverse
 void EE(ll a, ll b, ll& x, ll& y)
