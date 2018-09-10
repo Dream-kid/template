@@ -127,7 +127,7 @@ ll kmp(string str, string substr)
             j=b[j];
         }
     }
-    return count;//count = how many char are common between two string
+    return count;//count = how many substring are common between two string
 }*/
 /*
 ll visited[inf+10];
