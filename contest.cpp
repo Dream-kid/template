@@ -73,6 +73,10 @@ using namespace std;
 #define inf 100010
 #define eps 1e-9
 #define mod1  1000000009
+#define check(n,i) n&1<<i
+#define set(n,i) n|1<<i
+#define flip(n,i) n^1<<i
+#define clear(n,i) n& ~(1<<i)
 /*----------------------Graph Moves----------------*/
 //const int fx[]={+1,-1,+0,+0};
 //const int fy[]={+0,+0,+1,-1};
